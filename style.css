@@ -58,7 +58,8 @@ main {
 
 .information-container__button {
   width: 30%;
-  background-color: #FF79DA;
+  background: #ff79da;
+  background: linear-gradient(49deg, #ff79da 52%, #9356dc 100%);
   text-align: center;
   color: white;
   padding: 10px 0;
@@ -106,24 +107,56 @@ main {
 .restaurants__container__element {
   width: 60%;
   height: 300px;
+  border: 1px solid red;
   border-radius: 10px;
   margin: 10px 0;
+  position: relative;
 }
 
-.restaurants__container__element .contain {
-  display: block;
-  -o-object-fit: cover;
-     object-fit: cover;
+.restaurants__container__element__picture {
   width: 100%;
   height: 100%;
-  position: relative;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-radius: 10px;
 }
 
-.restaurant__title {
+.restaurants__container__element__content {
   position: absolute;
-  width: 95%;
-  height: 50px;
+  bottom: 0;
   background-color: white;
+  width: 100%;
+  height: 80px;
 }
+
+.restaurants__container__element__content h3 {
+  margin: 0;
+}
+
+.restaurants__container__element__content p {
+  margin: 0;
+}
+
+.restaurants__container__element__content .restaurants__container__element__content__favorite {
+  position: absolute;
+  right: 5%;
+  bottom: 40%;
+}
+
+/*
+.contain {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+
+}
+.restaurant__title {
+    position: absolute;
+    width: 95%;
+    height: 50px;
+    background-color: white;
+}*/
 /*# sourceMappingURL=style.css.map */

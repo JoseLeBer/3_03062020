@@ -35,7 +35,8 @@ main {
     background-color: #EDEDEC;
     &__button {
         width: 30%;
-        background-color: $color-secondary;
+        background: rgb(255,121,218);
+        background: linear-gradient(49deg, rgba(255,121,218,1) 52%, rgba(147,86,220,1) 100%);
         text-align: center;
         color: white;
         padding: 10px 0;
@@ -73,21 +74,52 @@ main {
 .restaurants__container__element {
     width: 60%;
     height: 300px;
+    border: 1px solid red;
     border-radius: 10px;
     margin: 10px 0;
-    .contain {
-        display: block;
-        object-fit: cover;
+    position: relative;
+    &__picture {
         width: 100%;
         height: 100%;
-        position: relative;
+        object-fit: cover;
         border-radius: 10px;
-
     }
+    &__content {
+        position: absolute;
+        bottom: 0;
+        background-color: white;
+        width: 100%;
+        height: 80px;
+    }
+}
+.restaurants__container__element__content {
+    h3 {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+    }
+    .restaurants__container__element__content__favorite {
+        position: absolute;
+        right: 5%;
+        bottom: 40%;
+    }
+}
+
+
+/*
+.contain {
+    display: block;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    position: relative;
+    border-radius: 10px;
+
 }
 .restaurant__title {
     position: absolute;
     width: 95%;
     height: 50px;
     background-color: white;
-}
+}*/
