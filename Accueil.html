@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ohmyfood!</title>
+    <script src="https://kit.fontawesome.com/c8aef56a45.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <img src="assets/ohmyfood.png" alt="logo_ohmyfood" class="header__logo">
+    </header>
+
+    <main>
+
+        <!-- SECTION BOOKING -->
+        <section class="booking">
+            <form method="POST" action="traitement.php" class="booking__form">
+                <i class="fas fa-map-marker-alt"></i>
+                <input type="text" name="location" id="location" placeholder="Paris, Belleville" />
+            </form>
+            <div class="information-container">
+                <h1 class="information-container__heading">Réserver le menu qui vous convient</h1>
+                <div class="information-container__byline">Découvrez des restaurants d'exception, sélectionnés par nos soins.</div>
+                <div class="information-container__button">Explorer nos restaurants</div>
+            </div>
+        </section>
+
+        <!-- SECTION OPERATION -->
+        <section class="operation">
+            <h2 class="h2-heading">Fonctionnement</h2>
+            <div class="operation__step">1 <i class="fas fa-mobile-alt operation__step--logo1"></i> <span>Choisissez un restaurant</span></div>
+            <div class="operation__step">2 <i class="fas fa-list-ul operation__step--logo1"></i> <span>Composez votre menu</span></div>
+            <div class="operation__step">3 <i class="fas fa-store operation__step--logo2"></i> <span>Dégustez au restaurant</span></div>
+        </section>
+
+        <!-- SECTION RESTAURANTS -->
+        <section class="restaurants">
+            <h2 class="h2-heading">Restaurants</h2>
+            <div class="restaurants__container">
+
+                <div class="restaurants__container__element">
+                    <img src="assets/la_palette_du_gout.jpg" alt="la_palette_du_gout" class="contain">
+                    <div class="restaurant__title">
+                        <h3>La palette du goût</h3>
+                        <p>Ménilmontant</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="restaurants__container__element">
+                    <img src="assets/la_note_enchantee.jp" alt="la_note_enchantee">
+                    <div class="restaurant__title">
+                        <h3>La note enchantée</h3>
+                        <p>Charonne</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="restaurants__container__element">
+                    <img src="assets/a_la_francaise.jp" alt="a_la_francaise">
+                    <div class="restaurant__title">
+                        <h3>À la française</h3>
+                        <p>Cité Rouge</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+
+                <div class="restaurants__container__element">
+                    <img src="assets/le_delice_des_sens.jp" alt="le_delice_des_sens">
+                    <div class="restaurant__title">
+                        <h3>Le délice des sens</h3>
+                        <p>Folie-Méricourt</p>
+                        <i class="far fa-heart"></i>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <img src="assets/ohmyfood.png" alt="logo_ohmyfood" class="footer__logo">
+        <ul class="footer__list">
+            <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
+            <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
+            <li>Mentions légales</li>
+            <li><a href="mailto:ohmyfood@gmail.com">Contact</a></li>
+        </ul>
+    </footer>
+    
+</body>
+</html>

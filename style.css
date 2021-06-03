@@ -1,0 +1,129 @@
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+.header {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.header__logo {
+  width: 25%;
+  height: auto;
+}
+
+main {
+  font-family: 'Roboto', sans-serif;
+}
+
+.booking {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.booking__form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 100%;
+  background-color: #D8D8D5;
+}
+
+.information-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #EDEDEC;
+}
+
+.information-container__button {
+  width: 30%;
+  background-color: #FF79DA;
+  text-align: center;
+  color: white;
+  padding: 10px 0;
+  border-radius: 40px;
+  margin: 20px 0;
+}
+
+.operation {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.operation__step {
+  width: 75%;
+  background-color: #EDEDEC;
+  margin-top: 10px;
+  border-radius: 20px;
+}
+
+.operation__step--logo1 {
+  color: #707070;
+}
+
+.operation__step--logo2 {
+  color: #9356DC;
+}
+
+.restaurants {
+  background-color: #EDEDEC;
+}
+
+.restaurants__container {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: (1fr)[4];
+      grid-template-rows: repeat(4, 1fr);
+}
+
+.restaurants__container__element {
+  width: 60%;
+  height: 300px;
+  border-radius: 10px;
+  margin: 10px 0;
+}
+
+.restaurants__container__element .contain {
+  display: block;
+  -o-object-fit: cover;
+     object-fit: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+  border-radius: 10px;
+}
+
+.restaurant__title {
+  position: absolute;
+  width: 95%;
+  height: 50px;
+  background-color: white;
+}
+/*# sourceMappingURL=style.css.map */
