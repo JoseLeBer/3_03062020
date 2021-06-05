@@ -35,12 +35,25 @@
         <section class="operation">
             <h2 class="h2-heading">Fonctionnement</h2>
             <div class="operation__grid">
+
                 <div class="operation__grid__element">
-                    1 <i class="fas fa-mobile-alt operation__grid__element--logo1"></i> <span>Choisissez un restaurant</span>
+                    <div class="operation__grid__element__number">1</div>
+                    <div class="operation__grid__element--logo1"><i class="fas fa-mobile-alt"></i></div>
+                    <p>Choisissez un restaurant</p>
                 </div>
-                <!-- <div class="number" style="margin-left:-10px;display:inlne;">1</span> -->
-                <div class="operation__grid__element">2 <i class="fas fa-list-ul operation__grid__element--logo1"></i> <span>Composez votre menu</span></div>
-                <div class="operation__grid__element">3 <i class="fas fa-store operation__grid__element--logo2"></i> <span>Dégustez au restaurant</span></div>
+
+                <div class="operation__grid__element">
+                    <div class="operation__grid__element__number">2</div>
+                    <div class="operation__grid__element--logo1"><i class="fas fa-list-ul"></i></div>
+                    <p>Composez votre menu</p>
+                </div>
+
+                <div class="operation__grid__element">
+                    <div class="operation__grid__element__number">3</div>
+                    <div class="operation__grid__element--logo2"><i class="fas fa-store"></i></div>
+                    <p>Dégustez au restaurant</p>
+                </div>
+
             </div>
         </section>
 
@@ -49,46 +62,43 @@
             <h2 class="h2-heading">Restaurants</h2>
             <div class="restaurants__grid">
 
-                <div class="restaurants__grid__element"> <!-- style="position:relative;padding:10px;" -->
-                    <!-- style="backgournd:url('assets/la_palette_du_gout.jpg')  no-repeat center center;" -->
-                    <!-- style="backgournd..." -->
+                <a href="la_palette_du_gout.html" class="restaurants__grid__element">
+                    <div class="restaurants__grid__element--new">Nouveau</div>
                     <img src="assets/la_palette_du_gout.jpg" alt="la_palette_du_gout" class="restaurants__grid__element__picture">
-                    
                     <div class="restaurants__grid__element__content">
                         <h3>La palette du goût</h3>
                         <p>Ménilmontant</p>
-                        <i class="far fa-heart restaurants__grid__element__content__favorite"></i>
+                        <i class="fas fa-heart restaurants__grid__element__content__favorite"></i>
                     </div>
-                    <!--<div class="restaurant_new" style="position:absolute;right:0;margin-left:5px;">Nouveau</div>
-                    <div class="restaurant_favoris" style="position:absolute;bottom:0;right:0;margin-left:5px;">Nouveau</div>-->
-                </div>
+                </a>
 
-                <div class="restaurants__grid__element">
+                <a href="la_note_enchantee.html" class="restaurants__grid__element">
+                    <div class="restaurants__grid__element--new">Nouveau</div>
                     <img src="assets/la_note_enchantee.jpg" alt="la_note_enchantee" class="restaurants__grid__element__picture">
                     <div class="restaurants__grid__element__content">
                         <h3>La note enchantée</h3>
                         <p>Charonne</p>
-                        <i class="far fa-heart restaurants__grid__element__content__favorite"></i>
+                        <i class="fas fa-heart restaurants__grid__element__content__favorite"></i>
                     </div>
-                </div>
+                </a>
 
-                <div class="restaurants__grid__element">
+                <a href="a_la_francaise.html" class="restaurants__grid__element">
                     <img src="assets/a_la_francaise.jpg" alt="a_la_francaise" class="restaurants__grid__element__picture">
                     <div class="restaurants__grid__element__content">
                         <h3>À la française</h3>
                         <p>Cité Rouge</p>
-                        <i class="far fa-heart restaurants__grid__element__content__favorite"></i>
+                        <i class="fas fa-heart restaurants__grid__element__content__favorite"></i>
                     </div>
-                </div>
+                </a>
 
-                <div class="restaurants__grid__element">
+                <a href="le_delice_des_sens.html" class="restaurants__grid__element">
                     <img src="assets/le_delice_des_sens.jpg" alt="le_delice_des_sens" class="restaurants__grid__element__picture">
                     <div class="restaurants__grid__element__content">
                         <h3>Le délice des sens</h3>
                         <p>Folie-Méricourt</p>
-                        <i class="far fa-heart restaurants__grid__element__content__favorite"></i>
+                        <i class="fas fa-heart restaurants__grid__element__content__favorite"></i>
                     </div>
-                </div>
+                </a>
 
             </div>
         </section>
