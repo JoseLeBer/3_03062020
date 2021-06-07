@@ -5,9 +5,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -15,11 +12,17 @@
   height: 50px;
 }
 
-.header__logo {
-  width: 33%;
-  height: auto;
+.header__arrow {
+  margin-left: 25px;
 }
 
+.header__logo {
+  width: 160px;
+  height: auto;
+  margin: auto;
+}
+
+/* STYLE GLOBAL MAIN */
 main {
   font-family: 'Roboto', sans-serif;
 }
@@ -142,8 +145,8 @@ main {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[3];
-      grid-template-rows: repeat(3, 1fr);
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
   justify-items: center;
 }
 
@@ -199,12 +202,21 @@ main {
   display: grid;
   -ms-grid-columns: 1fr;
       grid-template-columns: 1fr;
-  -ms-grid-rows: (1fr)[4];
-      grid-template-rows: repeat(4, 1fr);
+  -ms-grid-rows: 1fr 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr 1fr;
   justify-items: center;
 }
 
 .restaurants__grid__element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  text-decoration: none;
+  color: black;
   width: 90%;
   height: 300px;
   border-radius: 15px;
@@ -231,42 +243,49 @@ main {
 }
 
 .restaurants__grid__element__content {
-  position: absolute;
-  bottom: 0;
   background-color: white;
   width: 100%;
   height: 80px;
   border-radius: 0 0 15px 15px;
-  color: black;
 }
 
 .restaurants__grid__element__content h3 {
-  margin: 0;
+  margin: 10px 0 5px 0;
 }
 
 .restaurants__grid__element__content p {
   margin: 0;
 }
 
-.restaurants__grid__element__content .restaurants__grid__element__content__favorite {
+.restaurants__grid__element__content--heart1 {
   position: absolute;
   right: 5%;
-  bottom: 40%;
+  bottom: 9%;
+  z-index: 1;
 }
 
-.restaurants__grid__element__content .restaurants__grid__element__content__favorite:hover {
-  cursor: pointer;
-  color: #ff79da;
-  color: linear-gradient(180deg, #ff79da 6%, #9356dc 100%);
+.restaurants__grid__element__content--heart1:hover {
+  opacity: 0;
+}
+
+.restaurants__grid__element__content--heart2 {
+  position: absolute;
+  right: 5%;
+  bottom: 9%;
+  color: #FF79DA;
+  z-index: 1;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.restaurants__grid__element__content--heart2:hover {
+  opacity: 1;
 }
 
 /* FOOTER */
 .footer {
   background-color: #353535;
-}
-
-.footer__logo {
-  font-family: 'Shrikhand', cursive;
 }
 
 .footer__list {
@@ -275,8 +294,58 @@ main {
   font-family: 'Roboto', sans-serif;
 }
 
-.footer__link {
+.footer__list__logo {
+  font-family: 'Shrikhand', cursive;
+}
+
+.footer__list__link {
   text-decoration: none;
   color: white;
+}
+
+/* MENU LA PALETTE DU GOUT */
+.picture-menu {
+  width: 100%;
+  height: 250px;
+  margin-bottom: 0;
+}
+
+.picture-menu__photo {
+  width: 100%;
+  height: 250px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.la-palette {
+  width: 100%;
+  height: 1000px;
+  background-color: #F6F6F6;
+  border-radius: 30px 30px 0 0;
+  margin-top: 0;
+}
+
+.h2-menu {
+  font-family: 'Shrikhand', cursive;
+  padding-top: 20px;
+}
+
+.menu__grid {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr;
+      grid-template-columns: 1fr;
+  -ms-grid-rows: 1fr 1fr 1fr;
+      grid-template-rows: 1fr 1fr 1fr;
+}
+
+.menu__grid__element__item {
+  background-color: white;
+  margin: 10px 0;
+  border-radius: 10px;
+}
+
+.menu__grid__element__item:hover {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
