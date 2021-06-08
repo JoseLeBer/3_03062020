@@ -121,16 +121,26 @@ main {
 
 .information-container__button {
   width: 60%;
-  background: #ff79da;
   background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, #ff79da), to(#9356dc));
   background: linear-gradient(180deg, #ff79da 6%, #9356dc 100%);
   text-align: center;
   color: white;
+  font-family: 'Roboto', sans-serif;
   padding: 13px 0;
+  border: transparent;
   border-radius: 40px;
   margin: 30px 0 60px 0;
   -webkit-box-shadow: 0 8px 8px #CFCFCF;
           box-shadow: 0 8px 8px #CFCFCF;
+  cursor: pointer;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.information-container__button:hover {
+  opacity: 0.8;
+  -webkit-box-shadow: 0 12px 12px #B3B3B3;
+          box-shadow: 0 12px 12px #B3B3B3;
 }
 
 /* SECTION OPERATION */
@@ -208,6 +218,11 @@ main {
 }
 
 .restaurants__grid__element {
+  width: 90%;
+  position: relative;
+}
+
+.restaurants__grid__element__clickable {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -215,16 +230,15 @@ main {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  height: 300px;
   text-decoration: none;
   color: black;
-  width: 90%;
-  height: 300px;
   border-radius: 15px;
   margin: 10px 0;
   position: relative;
 }
 
-.restaurants__grid__element--new {
+.restaurants__grid__element__clickable--new {
   position: absolute;
   color: #008766;
   background-color: #99E2D0;
@@ -234,7 +248,7 @@ main {
   border-radius: 2px;
 }
 
-.restaurants__grid__element__picture {
+.restaurants__grid__element__clickable__picture {
   width: 100%;
   height: 220px;
   -o-object-fit: cover;
@@ -242,44 +256,45 @@ main {
   border-radius: 15px 15px 0 0;
 }
 
-.restaurants__grid__element__content {
+.restaurants__grid__element__clickable__content {
   background-color: white;
   width: 100%;
   height: 80px;
   border-radius: 0 0 15px 15px;
 }
 
-.restaurants__grid__element__content h3 {
+.restaurants__grid__element__clickable__content h3 {
   margin: 10px 0 5px 0;
 }
 
-.restaurants__grid__element__content p {
+.restaurants__grid__element__clickable__content p {
   margin: 0;
 }
 
-.restaurants__grid__element__content--heart1 {
+.restaurants__grid__element .far {
+  cursor: pointer;
   position: absolute;
   right: 5%;
   bottom: 9%;
   z-index: 1;
 }
 
-.restaurants__grid__element__content--heart1:hover {
-  opacity: 0;
-}
-
-.restaurants__grid__element__content--heart2 {
+.restaurants__grid__element .fas {
+  cursor: pointer;
   position: absolute;
   right: 5%;
   bottom: 9%;
-  color: #FF79DA;
   z-index: 1;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, #ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 6%, #9356dc 100%);
+  -webkit-background-clip: text;
   opacity: 0;
   -webkit-transition: opacity 500ms;
   transition: opacity 500ms;
 }
 
-.restaurants__grid__element__content--heart2:hover {
+.restaurants__grid__element .fas:active {
   opacity: 1;
 }
 
