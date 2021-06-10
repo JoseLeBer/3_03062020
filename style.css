@@ -1,5 +1,22 @@
 @import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto&display=swap");
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
 /* HEADER */
 .header {
   display: -webkit-box;
@@ -14,6 +31,7 @@
 
 .header__arrow {
   margin-left: 25px;
+  color: black;
 }
 
 .header__logo {
@@ -304,6 +322,8 @@ main {
 }
 
 .footer__list {
+  width: 90%;
+  margin: auto;
   list-style-type: none;
   color: white;
   font-family: 'Roboto', sans-serif;
@@ -319,30 +339,55 @@ main {
 }
 
 /* MENU LA PALETTE DU GOUT */
-.picture-menu {
+.menu-picture {
   width: 100%;
-  height: 250px;
-  margin-bottom: 0;
-}
-
-.picture-menu__photo {
-  width: 100%;
-  height: 250px;
+  height: 270px;
   -o-object-fit: cover;
      object-fit: cover;
+  position: relative;
+  z-index: -1;
 }
 
-.la-palette {
+.menu {
   width: 100%;
-  height: 1000px;
-  background-color: #F6F6F6;
   border-radius: 30px 30px 0 0;
-  margin-top: 0;
+  background-color: #F6F6F6;
+  margin-top: -57px;
+  z-index: 1;
 }
 
-.h2-menu {
+.menu__h2 {
+  padding: 20px 0 0 3%;
   font-family: 'Shrikhand', cursive;
-  padding-top: 20px;
+}
+
+.menu--far {
+  font-size: 0.8em;
+  padding-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  z-index: 1;
+}
+
+.menu--fas {
+  font-size: 0.8em;
+  padding-top: 10px;
+  cursor: pointer;
+  position: absolute;
+  right: 5%;
+  z-index: 1;
+  color: transparent;
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(6%, #ff79da), to(#9356dc));
+  background: linear-gradient(180deg, #ff79da 6%, #9356dc 100%);
+  -webkit-background-clip: text;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+
+.menu--fas:active {
+  opacity: 1;
 }
 
 .menu__grid {
@@ -354,13 +399,118 @@ main {
       grid-template-rows: 1fr 1fr 1fr;
 }
 
-.menu__grid__element__item {
-  background-color: white;
-  margin: 10px 0;
-  border-radius: 10px;
+.menu__grid__element {
+  width: 90%;
+  margin: 20px auto;
 }
 
-.menu__grid__element__item:hover {
+.menu__grid__element__category {
+  border-bottom: 3px solid #99E2D0;
+}
+
+.menu__grid__element__item {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: white;
+  height: 70px;
+  width: 100%;
+  margin: 15px 0;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.menu__grid__element__item:hover .menu__grid__element__item__animation {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.menu__grid__element__item:hover .menu__grid__element__item__animation .fa-check-circle {
+  -webkit-transform: rotate(-720deg);
+          transform: rotate(-720deg);
+}
+
+.menu__grid__element__item__info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 95%;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.menu__grid__element__item__info__name {
+  font-weight: bold;
+  margin: 5px;
+}
+
+.menu__grid__element__item__info__description {
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+.menu__grid__element__item__price {
+  font-weight: bold;
+  width: 5%;
+  border: 1px solid red;
+}
+
+.menu__grid__element__item__animation {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #99E2D0;
+  height: 100%;
+  width: 50px;
+  border-radius: 0 10px 10px 0;
+  -webkit-transform: translateX(50px);
+          transform: translateX(50px);
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+}
+
+.fa-check-circle {
+  color: white;
+  -webkit-transform: rotate(0);
+          transform: rotate(0);
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
+}
+
+.item1 {
+  -webkit-animation: fadeIn 4s;
+          animation: fadeIn 4s;
+}
+
+.item2 {
+  -webkit-animation: fadeIn 3500ms;
+          animation: fadeIn 3500ms;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+}
+
+.item3 {
+  -webkit-animation: fadeIn 3000ms;
+          animation: fadeIn 3000ms;
+  -webkit-animation-delay: 1000ms;
+          animation-delay: 1000ms;
 }
 /*# sourceMappingURL=style.css.map */

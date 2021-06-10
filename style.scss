@@ -4,6 +4,16 @@ $color-primary: #9356DC;
 $color-secondary: #FF79DA;
 $color-tertiary: #99E2D0;
 $background-color-primary: #F6F6F6;
+$color-button_new-and-animation: #99E2D0;
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
 
 /* HEADER */
 .header {
@@ -13,6 +23,7 @@ $background-color-primary: #F6F6F6;
     height: 50px;
     &__arrow {
         margin-left: 25px;
+        color: black;
     }
     &__logo {
         width: 160px;
@@ -156,7 +167,7 @@ main {
                 &--new {
                     position: absolute;
                     color: #008766;
-                    background-color: #99E2D0;
+                    background-color: $color-button_new-and-animation;
                     padding: 3px 12px;
                     right: 3%;
                     top: 5%;
@@ -211,6 +222,8 @@ main {
 .footer {
     background-color: #353535;
     &__list {
+        width: 90%;
+        margin: auto;
         list-style-type: none;
         color: white;
         font-family: 'Roboto', sans-serif;
@@ -225,39 +238,122 @@ main {
 }
 
 /* MENU LA PALETTE DU GOUT */
-.picture-menu {
+
+.menu-picture {
     width: 100%;
-    height: 250px;
-    margin-bottom: 0;
-    &__photo {
-        width: 100%;
-        height: 250px;
-        object-fit: cover;
-    }
+    height: 270px;
+    object-fit: cover;
+    position: relative;
+    z-index: -1;
 }
-.la-palette {
+.menu {
     width: 100%;
-    height: 1000px;
-    background-color: $background-color-primary;
     border-radius: 30px 30px 0 0;
-    margin-top: 0;
-}
-.h2-menu {
-    font-family: 'Shrikhand', cursive;
-    padding-top: 20px;
+    background-color: $background-color-primary;
+    margin-top: -57px;
+    z-index: 1;
+    &__h2 {
+        padding: 20px 0 0 3%;
+        font-family: 'Shrikhand', cursive;
+    }
+    &--far {
+        font-size: 0.8em;
+        padding-top: 10px;
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        z-index: 1;
+    }
+    &--fas {
+        font-size: 0.8em;
+        padding-top: 10px;
+        cursor: pointer;
+        position: absolute;
+        right: 5%;
+        z-index: 1;
+        color: transparent;
+        background: linear-gradient(180deg, rgba(255,121,218,1) 6%, rgba(147,86,220,1) 100%);
+        -webkit-background-clip: text;
+        opacity: 0;
+        transition: opacity 500ms;
+        &:active {
+            opacity: 1;
+        }
+    }
 }
 .menu__grid {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 1fr 1fr 1fr;
     &__element {
+        width: 90%;
+        margin: 20px auto;
+        &__category {
+            border-bottom: 3px solid $color-button_new-and-animation;
+        }
         &__item {
+            cursor: pointer;
+            display: flex;
             background-color: white;
-            margin: 10px 0;
+            height: 70px;
+            width: 100%;
+            margin: 15px 0;
             border-radius: 10px;
-            &:hover {
-                cursor: pointer;
+            overflow: hidden;
+            &:hover .menu__grid__element__item__animation {
+                transform: translateX(0);
+                .fa-check-circle {
+                    transform: rotate(-720deg);
+                }
+            }
+            &__info {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                width: 95%;
+                white-space: nowrap;
+                text-overflow: ellipsis;
+                &__name {
+                    font-weight: bold;
+                    margin: 5px;
+                }
+                &__description {
+                    font-size: 0.9em;
+                    margin: 5px;
+                }
+            }
+            &__price {
+                font-weight: bold;
+                width: 5%;
+                border: 1px solid red;
             }
         }
     }
+}
+.menu__grid__element__item__animation { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $color-button_new-and-animation;
+    height: 100%;
+    width: 50px;
+    border-radius: 0 10px 10px 0;
+    transform: translateX(50px);
+    transition: transform 600ms ease-in-out;
+}
+.fa-check-circle {
+    color: white;
+    transform: rotate(0);
+    transition: transform 600ms ease-in-out;
+}
+.item1 {
+    animation: fadeIn 4s;
+}
+.item2 {
+    animation: fadeIn 3500ms;
+    animation-delay: 500ms;
+}
+.item3 {
+    animation: fadeIn 3000ms;
+    animation-delay: 1000ms;
 }
