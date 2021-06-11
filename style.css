@@ -338,7 +338,9 @@ main {
   color: white;
 }
 
+/* ------------------------ */
 /* MENU LA PALETTE DU GOUT */
+/* ------------------------ */
 .menu-picture {
   width: 100%;
   height: 270px;
@@ -386,7 +388,7 @@ main {
   transition: opacity 500ms;
 }
 
-.menu--fas:active {
+.menu--fas:hover {
   opacity: 1;
 }
 
@@ -421,9 +423,22 @@ main {
   overflow: hidden;
 }
 
+.menu__grid__element__item:hover .menu__grid__element__item__info__name {
+  width: 75%;
+}
+
+.menu__grid__element__item:hover .menu__grid__element__item__info__description {
+  width: 75%;
+}
+
+.menu__grid__element__item:hover .menu__grid__element__item__price {
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
+}
+
 .menu__grid__element__item:hover .menu__grid__element__item__animation {
-  -webkit-transform: translateX(0);
-          transform: translateX(0);
+  -webkit-transform: translateX(-60px);
+          transform: translateX(-60px);
 }
 
 .menu__grid__element__item:hover .menu__grid__element__item__animation .fa-check-circle {
@@ -442,25 +457,38 @@ main {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 95%;
-  white-space: nowrap;
-  text-overflow: ellipsis;
+  width: 90%;
 }
 
 .menu__grid__element__item__info__name {
+  width: 90%;
   font-weight: bold;
   margin: 5px;
+  padding-left: 1%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__grid__element__item__info__description {
+  width: 90%;
   font-size: 0.9em;
   margin: 5px;
+  padding-left: 1%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 
 .menu__grid__element__item__price {
   font-weight: bold;
-  width: 5%;
-  border: 1px solid red;
+  font-size: 0.7em;
+  width: 10%;
+  padding-top: 42px;
+  -webkit-transition: -webkit-transform 600ms ease-in-out;
+  transition: -webkit-transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out;
+  transition: transform 600ms ease-in-out, -webkit-transform 600ms ease-in-out;
 }
 
 .menu__grid__element__item__animation {
@@ -475,10 +503,10 @@ main {
           align-items: center;
   background-color: #99E2D0;
   height: 100%;
-  width: 50px;
+  width: 60px;
+  margin: 0 -60px 0 0;
   border-radius: 0 10px 10px 0;
-  -webkit-transform: translateX(50px);
-          transform: translateX(50px);
+  /*transform: translateX(50px);*/
   -webkit-transition: -webkit-transform 600ms ease-in-out;
   transition: -webkit-transform 600ms ease-in-out;
   transition: transform 600ms ease-in-out;
@@ -512,5 +540,9 @@ main {
           animation: fadeIn 3000ms;
   -webkit-animation-delay: 1000ms;
           animation-delay: 1000ms;
+}
+
+.menu__bouton {
+  margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
