@@ -11,23 +11,144 @@
 <body>
     <!-- HEADER -->
     <header class="header">
-        <a href="Accueil.html"><i class="fas fa-arrow-left"></i></a>
+        <a href="Accueil.html"><i class="fas fa-arrow-left header__arrow"></i></a>
         <img src="assets/ohmyfood.png" alt="logo_ohmyfood" class="header__logo">
     </header>
 
     <main>
 
+        <!-- MENU LE DÉLICE DES SENS-->
+        <img src="assets/le_delice_des_sens.jpg" alt="le_delice_des_sens" class="menu-picture">
+
+        <section class="menu">
+            
+            <h2 class="menu__h2">Le délice des sens<i class="far fa-heart menu--far"></i><i class="fas fa-heart menu--fas"></i></h2>
+
+            <div class="menu__grid">
+
+                <!-- ENTRÉES-->
+                <div class="menu__grid__element"> 
+
+                    <div class="menu__grid__element__category">
+                        <p>ENTRÉES</p>
+                        <p></p>
+                    </div>
+                    <div class="menu__grid__element__item item1"> 
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Tartare de thon</p>
+                            <p class="menu__grid__element__item__info__description">Assaisonné au yuzu</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">25€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="menu__grid__element__item item2">
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Bouchée de homard croustillant</p>
+                            <p class="menu__grid__element__item__info__description">Et sa farandole de petits légumes</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">35€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="menu__grid__element__item item3">
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Velouté de cèpes</p>
+                            <p class="menu__grid__element__item__info__description">Aux truffes</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">20€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>
+
+                <!-- PLATS -->
+                <div class="menu__grid__element">
+
+                    <div class="menu__grid__element__category">
+                        <p>PLATS</p>
+                        <p></p>
+                    </div>
+                    <div class="menu__grid__element__item item1"> 
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Poulet rôti aux herbes de Provence</p>
+                            <p class="menu__grid__element__item__info__description">Et sa crème de truffe</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">40€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="menu__grid__element__item item2">
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Langouste rôtie</p>
+                            <p class="menu__grid__element__item__info__description">Et ses légumes de saison</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">35€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="menu__grid__element__item item3"> 
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Côte de boeuf Angus</p>
+                            <p class="menu__grid__element__item__info__description">Et sa purée de panais</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">44€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>
+                
+                <!-- DESSERTS -->
+                <div class="menu__grid__element">
+
+                    <div class="menu__grid__element__category">
+                        <p>DESSERTS</p>
+                        <p></p>
+                    </div>
+                    <div class="menu__grid__element__item item1">
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Farandole de desserts</p>
+                            <p class="menu__grid__element__item__info__description">Du chef</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">18€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="menu__grid__element__item item2">
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Crème brulée</p>
+                            <p class="menu__grid__element__item__info__description">Revisitée</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">22€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+
+                    <div class="menu__grid__element__item item3">
+                        <div class="menu__grid__element__item__info">
+                            <p class="menu__grid__element__item__info__name">Tiramisu</p>
+                            <p class="menu__grid__element__item__info__description">À la noisette</p>
+                        </div>
+                        <div class="menu__grid__element__item__price">23€</div>
+                        <div class="menu__grid__element__item__animation"><i class="fas fa-check-circle"></i></div>
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="menu__bouton">
+                <button type="button" class="information-container__button">Commander</button>
+            </div>
+
+        </section>
         
     </main>
 
     <!-- FOOTER -->
     <footer class="footer">
         <ul class="footer__list">
-            <li class="footer__logo">ohmyfood</li>
+            <li class="footer__list__logo">ohmyfood</li>
             <li><i class="fas fa-utensils"></i>Proposer un restaurant</li>
             <li><i class="fas fa-hands-helping"></i>Devenir partenaire</li>
             <li>Mentions légales</li>
-            <li><a href="mailto:ohmyfood@gmail.com" class="footer__link">Contact</a></li>
+            <li><a href="mailto:ohmyfood@gmail.com" class="footer__list__link">Contact</a></li>
         </ul>
     </footer>
 </body>

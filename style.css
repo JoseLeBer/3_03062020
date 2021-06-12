@@ -403,10 +403,15 @@ main {
 
 .menu__grid__element {
   width: 90%;
-  margin: 20px auto;
+  margin: 10px auto;
 }
 
-.menu__grid__element__category {
+.menu__grid__element__category p:not(:last-child) {
+  height: 10px;
+}
+
+.menu__grid__element__category p:last-child {
+  width: 50px;
   border-bottom: 3px solid #99E2D0;
 }
 
@@ -542,7 +547,20 @@ main {
           animation-delay: 1000ms;
 }
 
+.item4 {
+  -webkit-animation: fadeIn 2500ms;
+          animation: fadeIn 2500ms;
+  -webkit-animation-delay: 1500ms;
+          animation-delay: 1500ms;
+}
+
 .menu__bouton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: auto;
 }
 /*# sourceMappingURL=style.css.map */
