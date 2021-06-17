@@ -14,6 +14,72 @@ $color-button_new-and-animation: #99E2D0;
         opacity: 1;
     }
 }
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+        z-index: 2;
+    }
+    99% {
+        opacity: 1;
+        z-index: 2;
+    }
+    100% {
+        opacity: 0;
+        z-index: -1;
+    }
+}
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* LOADING SPINNER */
+.loader {
+    background-color: $color-primary;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    overflow: hidden;
+    z-index: 2;
+    opacity: 1;
+    animation: fadeOut 2s forwards;
+}
+.loading-spinner1 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 250px;
+    height: 250px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-top-color: $color-tertiary;
+    animation: spin 2500ms linear infinite;
+}
+.loading-spinner2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 200px;
+    height: 200px;
+    border: 5px solid transparent;
+    border-radius: 50%;
+    border-right-color: $color-secondary;
+    animation: spin 4000ms linear infinite;
+}
+.accueil {
+    height: 100%;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
 
 /* HEADER */
 .header {
@@ -55,7 +121,7 @@ main {
             &::placeholder {
                 font-family: 'Roboto', sans-serif;
                 text-align: center;
-                font-size: 1.2em;
+                font-size: 1.1em;
                 font-weight: bold;
                 color: black;
             }
@@ -72,6 +138,7 @@ main {
         margin: auto;
         text-align: center;
         margin-top: 35px;
+        font-size: 1.2em;
     }
     &__byline {
         width: 80%;
@@ -80,7 +147,7 @@ main {
         margin-top: 15px;
     }
     &__button {
-        width: 60%;
+        width: 50%;
         background: linear-gradient(180deg, rgba(255,121,218,1) 6%, rgba(147,86,220,1) 100%);
         text-align: center;
         color: white;
@@ -103,7 +170,7 @@ main {
 .h2-heading {
     width: 90%;
     margin: auto;
-    margin-top: 30px;
+    margin-top: 50px;
 }
 .operation__grid {
     display: grid;
@@ -147,11 +214,15 @@ main {
 /* SECTION RESTAURANTS */
 .restaurants {
     background-color: $background-color-primary;
+    h2 {
+        padding-top: 50px;
+    }
     &__grid {
         display: grid;
         grid-template-columns: 1fr;
         grid-template-rows: 1fr 1fr 1fr 1fr;
         justify-items: center;
+        padding: 20px 0 50px 0;
         &__element {
             width: 90%;
             position: relative;
@@ -172,6 +243,7 @@ main {
                     right: 3%;
                     top: 5%;
                     border-radius: 2px;
+                    font-size: 0.9em;
                 }
                 &__picture {
                     width: 100%;
@@ -186,9 +258,11 @@ main {
                     border-radius: 0 0 15px 15px;
                     h3 {
                         margin: 10px 0 5px 0;
+                        padding-left: 4%;
                     }
                     p {
                         margin: 0;
+                        padding-left: 4%;
                     }
                 }
             }
@@ -196,21 +270,23 @@ main {
             cursor: pointer;
             position: absolute;
             right: 5%;
-            bottom: 9%;
+            bottom: 12%;
             z-index: 1;
+            font-size: 1.3em;
         }
         .fas {
             cursor: pointer;
             position: absolute;
             right: 5%;
-            bottom: 9%;
+            bottom: 12%;
             z-index: 1;
+            font-size: 1.3em;
             color: transparent;
             background: linear-gradient(180deg, rgba(255,121,218,1) 6%, rgba(147,86,220,1) 100%);
             -webkit-background-clip: text;
             opacity: 0;
             transition: opacity 500ms;
-            &:active {
+            &:hover {
                 opacity: 1;
             }
         }
@@ -227,8 +303,20 @@ main {
         list-style-type: none;
         color: white;
         font-family: 'Roboto', sans-serif;
-        &__logo {
+        padding: 20px 0 30px 0;
+        li:nth-child(2) {
+            margin-top: 20px;
+        }
+        li:nth-child(n+3) {
+            margin-top: 10px;
+        }
+        &__brand {
             font-family: 'Shrikhand', cursive;
+            font-size: 1.2em;
+        }
+        &__logo {
+            display: inline-block;
+            padding-right: 20px;
         }
         &__link {
             text-decoration: none;
@@ -237,8 +325,9 @@ main {
     }
 }
 
+
 /* ------------------------ */
-/* MENU LA PALETTE DU GOUT */
+/* MENU RESTAURANTS */
 /* ------------------------ */
 
 .menu-picture {
@@ -368,7 +457,6 @@ main {
     width: 60px;
     margin: 0 -60px 0 0;
     border-radius: 0 10px 10px 0;
-    /*transform: translateX(50px);*/
     transition: transform 600ms ease-in-out;
 }
 .fa-check-circle {
@@ -395,4 +483,31 @@ main {
     display: flex;
     justify-content: center;
     margin: auto;
+}
+
+/* MEDIA QUERIES */ 
+@media all and (min-width: 992px) {
+    .operation__grid {
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 1fr;
+        padding-bottom: none;
+        &__element {
+            p {
+                font-size: 0.8em;
+            }
+        }
+    }
+    .restaurants {
+        padding-bottom: 40px;
+        &__grid {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: 1fr 1fr;
+            row-gap: 30px;
+        }
+    }
+    .menu__grid {
+        grid-template-columns: 33% 33% 33%;
+        grid-template-rows: 1fr;
+        margin-bottom: 40px;
+    }
 }
