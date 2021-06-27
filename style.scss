@@ -490,7 +490,6 @@ main {
     .operation__grid {
         grid-template-columns: 33% 33% 33%;
         grid-template-rows: 1fr;
-        padding-bottom: none;
         &__element {
             p {
                 font-size: 0.8em;

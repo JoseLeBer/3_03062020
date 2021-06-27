@@ -711,7 +711,6 @@ main {
         grid-template-columns: 33% 33% 33%;
     -ms-grid-rows: 1fr;
         grid-template-rows: 1fr;
-    padding-bottom: none;
   }
   .operation__grid__element p {
     font-size: 0.8em;
