@@ -188,6 +188,9 @@ main {
         border-radius: 20px;
         box-shadow: 0 5px 8px #EAEAEA;
         position: relative;
+        &:last-child {
+            background-color: #F5EDFF;
+        }
         &__number {
             position: absolute;
             left: 0;

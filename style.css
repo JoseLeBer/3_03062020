@@ -314,6 +314,10 @@ main {
   position: relative;
 }
 
+.operation__grid__element:last-child {
+  background-color: #F5EDFF;
+}
+
 .operation__grid__element__number {
   position: absolute;
   left: 0;
